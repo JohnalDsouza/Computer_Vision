@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 from PIL import Image # to open an image with np, module Python Image Library
 
-pic = Image.open('/content/00-puppy.jpg')
+pic = Image.open('C:/Users/Johnal/Desktop/Computer Vision/Computer_Vision/Numpy_and _image_basics/00-puppy.jpg')
 
 type(pic) # it is in PIL format, np cannot deal it with
 
@@ -30,7 +30,7 @@ pic_red = pic_arr.copy()
 pic_red.shape
 # ROW, COL, R=0 G=1 B=2 
 pic_red[:,:,0]
-
+plt.show()
 # Red Channel Values 0 (no red,pure black)-255 (full pure red)
 plt.imshow(pic_red[:,:,0], cmap = 'gray') # image in viridis, color mapping gray
 # in grayscale closer to white meaning more red
@@ -43,12 +43,13 @@ plt.imshow(pic_red[:,:,2], cmap = 'gray')
 
 pic_red[:,:,1] = 0
 plt.imshow(pic_red) # o/p in purple red+blue = purple
-
+plt.show()
 """Now lets remove blue"""
 
 pic_red[:,:,2] = 0
 plt.imshow(pic_red)
-
+plt.show()
 pic_red.shape # has three channels
 
 pic_red[:,:,0].shape # has only one channel ie red
+plt.show()
